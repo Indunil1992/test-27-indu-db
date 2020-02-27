@@ -50,7 +50,7 @@
         "type": "DynamoDB",
         "config": {
           "mode": 1,
-          "operation": "update",
+          "operation": "put",
           "table": {
             "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/hirutest",
             "name": "hirutest",
@@ -65,11 +65,10 @@
           },
           "isGlobalEditMode": false,
           "parameters": {
-            "Key": {
-              "price": "1",
-              "colour": "2"
+            "Key": {},
+            "Item": {
+              "price": "222"
             },
-            "Item": {},
             "ExpressionAttributeValues": {}
           },
           "triggerParams": {},
@@ -115,7 +114,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582788905255
+    "lastSave": 1582789135337
   },
   "VCS_STATE": {
     "provider": "GitHub",
