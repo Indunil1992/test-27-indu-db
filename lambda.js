@@ -8,7 +8,7 @@ exports.handler = async (event) => {
             ExpressionAttributeValues: {
                 ':@1': "NaN"
             },
-            KeyConditionExpression: "price < :",
+            KeyConditionExpression: "price < :@1",
             FilterExpression: "x = :@1"
         }).promise();
         console.log("data");

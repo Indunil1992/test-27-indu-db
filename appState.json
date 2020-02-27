@@ -45,39 +45,6 @@
     ],
     "currentFileId": "7d521eed-9ae0-42a5-b4fb-f3845e67ab8a",
     "resources": {
-      "ddbindunilDB27": {
-        "name": "ddbindunilDB27",
-        "type": "DynamoDB",
-        "config": {
-          "mode": 1,
-          "operation": "query",
-          "table": {
-            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/indunil-DB-27",
-            "name": "indunil-DB-27",
-            "partitionKey": "food",
-            "partitionKeyType": "S",
-            "hasSortKey": false,
-            "sortKey": "",
-            "sortKeyType": "S",
-            "payPerRequest": true,
-            "mode": 1
-          },
-          "isGlobalEditMode": false,
-          "parameters": {
-            "TableName": "indunil-DB-27",
-            "FilterExpression": " = :",
-            "ExpressionAttributeValues": {
-              ":": ""
-            }
-          },
-          "triggerParams": {},
-          "validator": {
-            "validatableFields": {},
-            "validity": true
-          },
-          "valid": true
-        }
-      },
       "ddbhirutest": {
         "name": "ddbhirutest",
         "type": "DynamoDB",
@@ -99,11 +66,11 @@
           "isGlobalEditMode": false,
           "parameters": {
             "TableName": "hirutest",
-            "KeyConditionExpression": "price < :",
-            "FilterExpression": "x = :@1",
             "ExpressionAttributeValues": {
-              ":@1": null
-            }
+              ":@1": "NaN"
+            },
+            "KeyConditionExpression": "price < :@1",
+            "FilterExpression": "x = :@1"
           },
           "triggerParams": {},
           "validator": {
@@ -148,7 +115,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582786101103
+    "lastSave": 1582788579652
   },
   "VCS_STATE": {
     "provider": "GitHub",
