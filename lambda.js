@@ -4,21 +4,15 @@ const ddb = new AWS.DynamoDB.DocumentClient();
 exports.handler = async (event) => {
     try {
         let data = await ddb.get({
-            TableName: "hirutest",
+            TableName: "indunil-DB-27",
             Key: {
-                price: "1",
-                colour: "2"
+                food: "cakes"
             }
         }).promise();
-        
-    console.log("data");
-    console.log(data);
-
+        console.log(data);
     } catch (err) {
         // error handling goes here
-    console.log("errr");
-    console.log(err);
-
+        console.log(err);
     };
 
     return { "message": "Successfully executed" };

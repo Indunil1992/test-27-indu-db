@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "lambda.js",
         "cursor": {
-          "lineNumber": 13,
-          "column": 9
+          "lineNumber": 12,
+          "column": 27
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -23,7 +23,7 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1sachithraAPInameteststgingindany",
+            "resourceName": "apigusEast1sachithraAPIname1teststgingindu27get",
             "config": {}
           }
         ],
@@ -103,6 +103,58 @@
           "stageDeploymentId": "vacouk",
           "mode": 1
         }
+      },
+      "apigusEast1sachithraAPIname1teststgingindu27get": {
+        "name": "apigusEast1sachithraAPIname1teststgingindu27get",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "sachithraAPIname1",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "test/stging/indu/27",
+          "resourcePath": "/test/stging/indu/27",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "TestM",
+          "mode": 0
+        }
+      },
+      "ddbindunilDB27": {
+        "name": "ddbindunilDB27",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "operation": "get",
+          "table": {
+            "arn": "",
+            "name": "indunil-DB-27",
+            "partitionKey": "food",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "quantity",
+            "sortKeyType": "N",
+            "payPerRequest": true,
+            "mode": 0
+          },
+          "isGlobalEditMode": false,
+          "parameters": {
+            "Key": {
+              "food": "cakes"
+            },
+            "Item": {},
+            "ExpressionAttributeValues": {}
+          },
+          "triggerParams": {},
+          "validator": {
+            "validatableFields": {},
+            "validity": true
+          },
+          "valid": true
+        }
       }
     },
     "customTemplate": {
@@ -139,7 +191,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582781841895
+    "lastSave": 1582782842696
   },
   "VCS_STATE": {
     "provider": "GitHub",
