@@ -5,8 +5,11 @@ exports.handler = async (event) => {
     try {
         let data = await ddb.query({
             TableName: "hirutest",
-            KeyConditionExpression: "price > :",
-            FilterExpression: " = :"
+            ExpressionAttributeValues: {
+                ':@1': "NaN"
+            },
+            KeyConditionExpression: "price < :",
+            FilterExpression: "x = :@1"
         }).promise();
         console.log("data");
         console.log(data);

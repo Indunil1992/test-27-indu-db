@@ -99,8 +99,11 @@
           "isGlobalEditMode": false,
           "parameters": {
             "TableName": "hirutest",
-            "FilterExpression": " = :",
-            "KeyConditionExpression": "price > :"
+            "KeyConditionExpression": "price < :",
+            "FilterExpression": "x = :@1",
+            "ExpressionAttributeValues": {
+              ":@1": null
+            }
           },
           "triggerParams": {},
           "validator": {
@@ -145,7 +148,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582785738588
+    "lastSave": 1582786101103
   },
   "VCS_STATE": {
     "provider": "GitHub",
