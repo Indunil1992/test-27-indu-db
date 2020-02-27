@@ -98,9 +98,9 @@
           },
           "isGlobalEditMode": false,
           "parameters": {
-            "TableName": "indunil-DB-27",
-            "ExpressionAttributeValues": {},
-            "FilterExpression": " = :"
+            "TableName": "hirutest",
+            "FilterExpression": " = :",
+            "KeyConditionExpression": "price > :"
           },
           "triggerParams": {},
           "validator": {
@@ -145,7 +145,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582785506462
+    "lastSave": 1582785738588
   },
   "VCS_STATE": {
     "provider": "GitHub",
