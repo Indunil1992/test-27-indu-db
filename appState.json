@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "lambda.js",
         "cursor": {
-          "lineNumber": 4,
-          "column": 57
+          "lineNumber": 13,
+          "column": 33
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -21,15 +21,7 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "ddbhirutest",
-            "config": {
-              "StartingPosition": "AT_TIMESTAMP",
-              "BatchSize": "60"
-            }
-          }
-        ],
+        "triggers": [],
         "testCases": {
           "944df225-1127-421d-a5ac-425223c47683": {
             "id": "944df225-1127-421d-a5ac-425223c47683",
@@ -197,7 +189,7 @@
         "type": "DynamoDB",
         "config": {
           "mode": 0,
-          "operation": "get",
+          "operation": "delete",
           "table": {
             "arn": "",
             "name": "indunil-DB-27",
@@ -212,7 +204,7 @@
           "isGlobalEditMode": false,
           "parameters": {
             "Key": {
-              "food": "cakes"
+              "food": "1"
             },
             "Item": {},
             "ExpressionAttributeValues": {}
@@ -260,7 +252,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582784243867
+    "lastSave": 1582784575247
   },
   "VCS_STATE": {
     "provider": "GitHub",
