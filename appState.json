@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "lambda.js",
         "cursor": {
-          "lineNumber": 1,
-          "column": 1
+          "lineNumber": 10,
+          "column": 35
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -50,7 +50,7 @@
         "type": "DynamoDB",
         "config": {
           "mode": 1,
-          "operation": "query",
+          "operation": "scan",
           "table": {
             "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/hirutest",
             "name": "hirutest",
@@ -65,12 +65,9 @@
           },
           "isGlobalEditMode": false,
           "parameters": {
-            "TableName": "hirutest",
-            "ExpressionAttributeValues": {
-              ":@1": "NaN"
-            },
-            "KeyConditionExpression": "price < :@1",
-            "FilterExpression": "x = :@1"
+            "Key": {},
+            "Item": {},
+            "ExpressionAttributeValues": {}
           },
           "triggerParams": {},
           "validator": {
@@ -115,7 +112,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582788579652
+    "lastSave": 1582788732618
   },
   "VCS_STATE": {
     "provider": "GitHub",
