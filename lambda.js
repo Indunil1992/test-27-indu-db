@@ -10,6 +10,9 @@ exports.handler = async (event) => {
                 colour: "2"
             }
         }).promise();
+        
+    console.log("data");
+    console.log(data);
 
     } catch (err) {
         // error handling goes here
