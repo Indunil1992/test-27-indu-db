@@ -13,6 +13,9 @@ exports.handler = async (event) => {
 
     } catch (err) {
         // error handling goes here
+    console.log("errr");
+    console.log(err);
+
     };
 
     return { "message": "Successfully executed" };

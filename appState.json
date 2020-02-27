@@ -11,7 +11,7 @@
         "isRemovable": true,
         "filePath": "lambda.js",
         "cursor": {
-          "lineNumber": 7,
+          "lineNumber": 18,
           "column": 1
         },
         "config": {
@@ -26,7 +26,16 @@
             "resourceName": "apigusEast1sachithraAPInameteststgingindany",
             "config": {}
           }
-        ]
+        ],
+        "testCases": {
+          "944df225-1127-421d-a5ac-425223c47683": {
+            "id": "944df225-1127-421d-a5ac-425223c47683",
+            "name": "Test event",
+            "functionId": "7d521eed-9ae0-42a5-b4fb-f3845e67ab8a",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        }
       }
     },
     "openFiles": [
@@ -130,7 +139,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582781133548
+    "lastSave": 1582781713813
   },
   "VCS_STATE": {
     "provider": "GitHub",
