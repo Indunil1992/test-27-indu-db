@@ -3,16 +3,21 @@ const ddb = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = async (event) => {
     try {
-        let data = await ddb.scan({
-            TableName: "hirutest"
+        let data = await ddb.update({
+            TableName: "hirutest",
+            Key: {
+                price: "1",
+                colour: "2"
+            }
         }).promise();
+
         console.log("data");
                 console.log(data);
     } catch (err) {
-        // error handling goes here
                 console.log("err");
                 console.log(err);
 
+        // error handling goes here
     };
 
 
