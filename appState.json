@@ -12,7 +12,7 @@
         "filePath": "lambda.js",
         "cursor": {
           "lineNumber": 4,
-          "column": 50
+          "column": 57
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -25,8 +25,8 @@
           {
             "resourceName": "ddbhirutest",
             "config": {
-              "StartingPosition": "LATEST",
-              "BatchSize": "50"
+              "StartingPosition": "AT_TIMESTAMP",
+              "BatchSize": "60"
             }
           }
         ],
@@ -87,13 +87,43 @@
             },
             "isGlobalEditMode": false,
             "parameters": {
-              "Key": {},
-              "Item": {},
-              "ExpressionAttributeValues": {}
+              "mode": 1,
+              "table": {
+                "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/hirutest",
+                "name": "hirutest",
+                "partitionKey": "price",
+                "partitionKeyType": "S",
+                "hasSortKey": true,
+                "sortKey": "colour",
+                "sortKeyType": "S",
+                "payPerRequest": true,
+                "mode": 1,
+                "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/hirutest/stream/2020-01-02T08:32:20.233"
+              },
+              "isGlobalEditMode": false,
+              "parameters": {
+                "Key": {},
+                "Item": {},
+                "ExpressionAttributeValues": {}
+              },
+              "triggerParams": {
+                "StartingPosition": "TRIM_HORIZON",
+                "BatchSize": "100"
+              },
+              "validator": {
+                "validatableFields": {},
+                "validity": true
+              },
+              "valid": true,
+              "triggerConfig": {
+                "StartingPosition": "TRIM_HORIZON",
+                "BatchSize": "100"
+              },
+              "TableName": "hirutest"
             },
             "triggerParams": {
-              "StartingPosition": "TRIM_HORIZON",
-              "BatchSize": "100"
+              "StartingPosition": "LATEST",
+              "BatchSize": "50"
             },
             "validator": {
               "validatableFields": {},
@@ -101,14 +131,14 @@
             },
             "valid": true,
             "triggerConfig": {
-              "StartingPosition": "TRIM_HORIZON",
-              "BatchSize": "100"
+              "StartingPosition": "LATEST",
+              "BatchSize": "50"
             },
             "TableName": "hirutest"
           },
           "triggerParams": {
-            "StartingPosition": "LATEST",
-            "BatchSize": "50"
+            "StartingPosition": "AT_TIMESTAMP",
+            "BatchSize": "60"
           },
           "validator": {
             "validatableFields": {},
@@ -230,7 +260,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582783996460
+    "lastSave": 1582784243867
   },
   "VCS_STATE": {
     "provider": "GitHub",
