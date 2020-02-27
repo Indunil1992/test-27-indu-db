@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "lambda.js",
         "cursor": {
-          "lineNumber": 12,
-          "column": 27
+          "lineNumber": 1,
+          "column": 1
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -23,8 +23,11 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1sachithraAPIname1teststgingindu27get",
-            "config": {}
+            "resourceName": "ddbhirutest",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "100"
+            }
           }
         ],
         "testCases": {
@@ -32,7 +35,14 @@
             "id": "944df225-1127-421d-a5ac-425223c47683",
             "name": "Test event",
             "functionId": "7d521eed-9ae0-42a5-b4fb-f3845e67ab8a",
-            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          },
+          "fadfe0bb-4e26-4b95-99a9-1159df72e349": {
+            "id": "fadfe0bb-4e26-4b95-99a9-1159df72e349",
+            "name": "Test event",
+            "functionId": "7d521eed-9ae0-42a5-b4fb-f3845e67ab8a",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
             "eventTemplate": "hello-world"
           }
         }
@@ -48,7 +58,6 @@
         "type": "DynamoDB",
         "config": {
           "mode": 1,
-          "operation": "get",
           "table": {
             "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/hirutest",
             "name": "hirutest",
@@ -63,14 +72,14 @@
           },
           "isGlobalEditMode": false,
           "parameters": {
-            "Key": {
-              "price": "1",
-              "colour": "2"
-            },
+            "Key": {},
             "Item": {},
             "ExpressionAttributeValues": {}
           },
-          "triggerParams": {},
+          "triggerParams": {
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": "100"
+          },
           "validator": {
             "validatableFields": {},
             "validity": true
@@ -191,7 +200,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1582782842696
+    "lastSave": 1582783102194
   },
   "VCS_STATE": {
     "provider": "GitHub",
